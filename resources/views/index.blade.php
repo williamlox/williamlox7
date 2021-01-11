@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-        <h1>許文智的期末作業</h1>
+        <h1>許文智的期末網站</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">J109212110</a>
@@ -46,7 +47,7 @@
 </nav>
 <!-- 只有登入者才有權限 -->
 @auth
-<form method='POST' action="/insert/" style="margin-bottom:20px"  onsubmit='check();return false;'id='reg' name='reg'>
+<form method='POST' action="/insert" style="margin-bottom:20px"  onsubmit='check();return false;'id='reg' name='reg'>
 @csrf
 最新消息 : <input type=text size=40 name=title>
 <input type=submit value="發佈" class="btn btn-success">

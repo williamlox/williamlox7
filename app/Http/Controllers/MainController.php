@@ -8,18 +8,18 @@ use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
-    public function index(){
+    public function index() {
         $titles = Headlines::all();
-        return view("index",compact('titles'));
+        return view("index", compact('titles'));
     }
 
     public function insert(Request $req){
-    if ($req->isMethod('post')){  
-        $title = $req ->input('title');
-        //if($title)長度>0才新增
-        $data = new Headlines;
-        $data ->title = $title;
-        $data ->save();
+        if ($req->isMethod('post')){  
+            $title = $req ->input('title');
+            //if($title)長度>0才新增
+            $data = new Headlines;
+            $data ->title = $title;
+            $data ->save();
         }
         return redirect("/");
     }
@@ -35,4 +35,3 @@ class MainController extends Controller
         return redirect("/");
     }
 }
-
